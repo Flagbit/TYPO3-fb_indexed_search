@@ -1,6 +1,9 @@
 2013-06-19 Michael Bentz  <michael.bentz@flagbit.de>
 
 	* added ext_autoload.php for TYPO3 4.5.x compatibility
+	* added inclusion of TypoScript files
+	* changed default TypoScript link configuration
+	* released Version 0.0.3
 
 2013-06-17 Michael Bentz  <michael.bentz@flagbit.de>
 
