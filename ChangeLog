@@ -1,6 +1,6 @@
 2013-06-19 Michael Bentz  <michael.bentz@flagbit.de>
 
-	* added ext_autload.php for TYPO3 4.5.x compatibility
+	* added ext_autoload.php for TYPO3 4.5.x compatibility
 
 2013-06-17 Michael Bentz  <michael.bentz@flagbit.de>
 
