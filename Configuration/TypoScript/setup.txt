@@ -1,18 +1,26 @@
 
 plugin.tx_indexedsearch.search.pageBrowser {
+	linkConfig = TEXT
 	linkConfig {
-		parameter.data = TSFE:id
-		additionalParams.cObject = COA
-		additionalParams.cObject {
-			10 = TEXT
-			10.field = piVars_sword
-			10.rawUrlEncode = 1
-			10.dataWrap = &{field:prefixId}[sword]=|
+		value = {field:pageBrowser_linkText}
+		insertData = 1
 
-			20 = TEXT
-			20.field = pageBrowser_pointer
-			20.intval = 1
-			20.dataWrap = &{field:prefixId}[pointer]=|
+		typolink {
+			title = {field:pageBrowser_linkText}
+			insertData = 1
+			parameter.data = TSFE:id
+			additionalParams.cObject = COA
+			additionalParams.cObject {
+				10 = TEXT
+				10.field = piVars_sword
+				10.rawUrlEncode = 1
+				10.dataWrap = &{field:prefixId}[sword]=|
+
+				20 = TEXT
+				20.field = pageBrowser_pointer
+				20.intval = 1
+				20.dataWrap = &{field:prefixId}[pointer]=|
+			}
 		}
 	}
 }
