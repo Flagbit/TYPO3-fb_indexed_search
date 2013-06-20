@@ -1,0 +1,50 @@
+
+plugin.tx_indexedsearch.search.pageBrowser {
+	linkConfig {
+		parameter.data = TSFE:id
+		additionalParams.cObject = COA
+		additionalParams.cObject {
+			10 = TEXT
+			10.field = piVars_sword
+			10.rawUrlEncode = 1
+			10.dataWrap = &{field:prefixId}[sword]=|
+
+			20 = TEXT
+			20.field = pageBrowser_pointer
+			20.intval = 1
+			20.dataWrap = &{field:prefixId}[pointer]=|
+		}
+	}
+}
+
+plugin.tx_indexedsearch.search.pageBrowser.linkConfig.additionalParams.cObject {
+
+# You can uncomment the following blocks if you need "freeIndexUid" or "results"
+# to get passed on via the page-browser links. This is only required if you allow
+# the visitor to change the defaults of this parameters which you set via TypoScript
+# for the indexed_search plugin.
+#
+# So if you have a drop down which allows the visitor to select the number of results
+# per page you should usually uncomment the block "40" so the currently selected
+# value for "results at a time" gets passed on via the page-browser links.
+
+#	30 = TEXT
+#	30 {
+#		field = pageBrowser_freeIndexUid
+#		intval = 1
+#		dataWrap = &{field:prefixId}[freeIndexUid]=|
+#	}
+
+
+#	40 = TEXT
+#	40 {
+#		field = piVars_results
+#		intval = 1
+#		dataWrap = &{field:prefixId}[results]=|
+#	}
+
+# Define all additional parameters you need to get passed along here
+# These could be: extResume, type, defOp, group, sections, media, order, desc, lang
+# or all other parameters which are understood by indexed_search
+
+}
